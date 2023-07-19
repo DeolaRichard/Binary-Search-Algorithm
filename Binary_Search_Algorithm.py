@@ -19,8 +19,25 @@ def binary_search(dist, element):
 
     return -1
 
+# collecting data from the user
 
-my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-target = 2
+# Creating an empty list
+my_list = []
 
-binary_search(my_list, target)
+# Ask the User for the number of inputs they want to add
+num_inputs = int(input("How many inputs are you entering?"))
+
+# Collect the inputs and add them to the list
+for i in range(num_inputs):
+    user_input = input("Enter input {}: ".format(i + 1))
+    my_list.append(user_input)
+
+print("Your inputed data is: ", my_list)
+
+
+
+# target = ''
+
+
+
+# binary_search(my_list, target)
