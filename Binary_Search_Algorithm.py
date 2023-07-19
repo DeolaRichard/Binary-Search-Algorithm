@@ -1,7 +1,7 @@
 def binary_search(dist, element):
     middle = 0
     start = 0
-    end = len(dist)
+    end = len(dist) - 1  # Subtract One to accommodate Zero Indexing
     steps = 0
 
     while start <= end:
@@ -15,7 +15,7 @@ def binary_search(dist, element):
         if element < dist[middle]:
             end = middle - 1
         else:
-            end = middle + 1
+            start = middle + 1
 
     return -1
 
@@ -35,10 +35,14 @@ for i in range(num_inputs):
 
 print("Your inputted data is: ", my_list)
 
-
 # Accept a single integer value for the target value
 
 # Ask the user for the value of the target
 target = int(input("What is your target value?"))
 
 result = binary_search(my_list, target)
+
+if result != -1:
+    print("Target Value found at index: ", result + 1)  # Add One to accommodate zero indexing
+else:
+    print("Target Value not found in list.")
