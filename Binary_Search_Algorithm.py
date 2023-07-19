@@ -19,6 +19,7 @@ def binary_search(dist, element):
 
     return -1
 
+
 # collecting data from the user
 
 # Creating an empty list
@@ -29,15 +30,15 @@ num_inputs = int(input("How many inputs are you entering?"))
 
 # Collect the inputs and add them to the list
 for i in range(num_inputs):
-    user_input = input("Enter input {}: ".format(i + 1))
+    user_input = int(input("Enter input {}: ".format(i + 1)))
     my_list.append(user_input)
 
-print("Your inputed data is: ", my_list)
+print("Your inputted data is: ", my_list)
 
 
+# Accept a single integer value for the target value
 
-# target = ''
+# Ask the user for the value of the target
+target = int(input("What is your target value?"))
 
-
-
-# binary_search(my_list, target)
+result = binary_search(my_list, target)
