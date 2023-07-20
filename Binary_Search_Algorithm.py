@@ -12,7 +12,7 @@ def binary_search(dist, element):
 
         if element == dist[middle]:
             return middle
-        if element < dist[middle]:
+        if element > dist[middle]:
             end = middle - 1
         else:
             start = middle + 1
